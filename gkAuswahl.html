@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grundkurs Auswahl</title>
+    <link rel="stylesheet" href="gkAuswahl.css">
+    
+</head>
+<body>
+<h1>Grundkurs Auswahl</h1>
+
+<div class="drop">
+    <div class="Gks">
+    <button id="Gk1" class="dropButton" onclick="showGk('Gk1')">Gk1</button>
+    <button id="Gk2" class="dropButton" onclick="showGk('Gk2')">Gk2</button>
+    <button id="Gk3" class="dropButton" onclick="showGk('Gk3')">Gk3</button>
+    <button id="Gk4" class="dropButton" onclick="showGk('Gk4')">Gk4</button>
+    <button id="Gk5" class="dropButton" onclick="showGk('Gk5')">Gk5</button>
+    <button id="Gk6" class="dropButton" onclick="showGk('Gk6')">Gk6</button>
+    <button id="Gk7" class="dropButton" onclick="showGk('Gk7')">Gk7</button>
+    <button id="Gk8" class="dropButton" onclick="showGk('Gk8')">Gk8</button>
+    <button id="Gk9" class="dropButton" onclick="showGk('Gk9')">Gk9</button>
+    <button id="plus" class="dropButton" onclick="addGk()">+</button>
+    </div>
+
+    <div class="dropContent">   
+        <button id="Mathematik" onclick="setGk('Mathematik')">Mathematik</button>
+        <button id="Biologie" onclick="setGk('Biologie')">Biologie</button>
+        <button id="Chemie" onclick="setGk('Chemie')">Chemie</button>
+        <button id="Physik" onclick="setGk('Physik')">Physik</button>
+        <button id="Informatik" onclick="setGk('Informatik')">Informatik</button>
+
+        <button id="Darstellendes Spiel"  onclick="setGk('Darstellendes Spiel')">Darstellendes Spiel</button>
+        <button id="Kunst" onclick="setGk('Kunst')">Kunst</button>
+        <button id="Musik" onclick="setGk('Musik')">Musik</button>
+
+
+        <button id="Deutsch" onclick="setGk('Deutsch')">Deutsch</button>
+        <button id="Englisch" onclick="setGk('Englisch')">Englisch</button>
+        <button id="Französisch" onclick="setGk('Französisch')">Fanzösisch</button>
+        <button id="Latein" onclick="setGk('Latein')">Latein</button>
+        <button id="Spanisch" onclick="setGk('Spanisch')">Spanisch</button>
+        <button id="Erdkunde" onclick="setGk('Erdkunde')">Erdkunde</button>
+        <button id="Geschichte" onclick="setGk('Geschichte')">Geschichte</button>
+        <button id="Sozialkunde" onclick="setGk('Sozialkunde')">Sozialkunde</button>
+
+        <button id="Sport" onclick="setGk('Sport')">Sport</button>
+
+        <button id="Religion" onclick="setGk('Religion')">Religion</button>
+    </div>
+
+</div>
+
+<div class="bestaetigen">
+    <button onclick="changeWindow()">Weiter</button>
+</div>
+
+
+
+    <script  src="gkAuswahl.js" ></script>
+
+</body>
+
+
+
+
+</html>

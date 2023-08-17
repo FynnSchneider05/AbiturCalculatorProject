@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Abitur Rechner</title>
+<link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+
+<h1>Zum Abiturrechner</h1>
+
+<div class="drop">
+    <div id="dropButton">
+    <button id="Lk1"  onclick="setCurrentLk('Lk1')">Lk1</button>
+    <button id="Lk2"  onclick="setCurrentLk('Lk2')">Lk2</button>
+    <button id="Lk3" onclick="setCurrentLk('Lk3')">Lk3</button>
+    </div>
+
+<div id="dropContent">   
+        <button id="Mathematik" onclick="setLk('Mathematik')">Mathematik</button>
+        <button id="Biologie" onclick="setLk('Biologie')">Biologie</button>
+        <button id="Chemie" onclick="setLk('Chemie')">Chemie</button>
+        <button id="Physik" onclick="setLk('Physik')">Physik</button>
+        <button id="Informatik" onclick="setLk('Informatik')">Informatik</button>
+
+        <button id="Darstellendes Spiel"  onclick="setLk('Darstellendes Spiel')">Darstellendes Spiel</button>
+        <button id="Kunst" onclick="setLk('Kunst')">Kunst</button>
+        <button id="Musik" onclick="setLk('Musik')">Musik</button>
+
+
+        <button id="Deutsch" onclick="setLk('Deutsch')">Deutsch</button>
+        <button id="Englisch" onclick="setLk('Englisch')">Englisch</button>
+        <button id="Französisch" onclick="setLk('Französisch')">Fanzösisch</button>
+        <button id="Latein" onclick="setLk('Latein')">Latein</button>
+        <button id="Spanisch" onclick="setLk('Spanisch')">Spanisch</button>
+        <button id="Erdkunde" onclick="setLk('Erdkunde')">Erdkunde</button>
+        <button id="Geschichte" onclick="setLk('Geschichte')">Geschichte</button>
+        <button id="Sozialkunde" onclick="setLk('Sozialkunde')">Sozialkunde</button>
+
+        <button id="Sport" onclick="setLk('Sport')">Sport</button>
+
+        <button id="Religion" onclick="setLk('Religion')">Religion</button>
+        
+</div>
+</div>
+
+<div class="bestaetigen">
+    <button onclick="GkAuswahl()">Weiter</button>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

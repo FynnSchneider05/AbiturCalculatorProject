@@ -1,0 +1,91 @@
+html{
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: inherit;
+}
+
+body {
+    background-color: #1d2326;
+    color: #bfa38a;
+    font-family: monospace;
+    text-align: center;
+  }
+
+  h1{
+    font-size: 300%;
+  }
+
+  button {
+    width: 200px;
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 35px;
+    border: 1px solid #bfa38a;
+    background: transparent;
+    color: #bfa38a;
+    border-radius: 5px;
+  }
+
+  .drop{
+    display: flex;
+    margin-top: 3%;
+  }
+  
+
+  .Gks {
+    margin-left: 0px;
+    padding-left: 5%;
+    display: flex;
+    width: 20%;
+    flex-wrap: wrap;
+    border-right: 2px dotted black;
+    padding-right: 2%;
+  }
+
+
+
+  .dropContent{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+    justify-content: end;
+    
+}
+
+.dropButton{
+    margin-top: 15%;
+}
+
+  .dropContent button{
+    display: none;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 4%;
+  }
+
+  .drop button:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+.bestaetigen button{
+  display: none;
+  margin-top: 10%;
+  margin-left: 30%;
+  width: 40%;
+  height: 40px;
+  
+} 
+
+#Gk8{
+  display: none;
+}
+#Gk9{display: none;}
