@@ -218,6 +218,9 @@ function changeWindow(){
     LkNoten = JSON.stringify(LkNoten);
     localStorage.setItem("LkNoten", LkNoten);
 
+    GkNoten = JSON.stringify(GkNoten);
+    localStorage.setItem("GkNoten", GkNoten);
+
     mAbiturHalbjahrNoten = JSON.stringify(mAbiturHalbjahrNoten);
     localStorage.setItem("mündlichesAbiturHalbjahrNoten", mAbiturHalbjahrNoten);
 
