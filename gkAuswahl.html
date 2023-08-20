@@ -8,8 +8,8 @@
 <body>
 <h1>Grundkurs Auswahl</h1>
 
-<div class="drop">
-    <div class="Gks">
+<div id="SelectionButtons">
+    <div id="GkButtons">
     <button id="Gk1" class="dropButton" onclick="showGk('Gk1')">Gk1</button>
     <button id="Gk2" class="dropButton" onclick="showGk('Gk2')">Gk2</button>
     <button id="Gk3" class="dropButton" onclick="showGk('Gk3')">Gk3</button>
@@ -22,7 +22,7 @@
     <button id="plus" class="dropButton" onclick="addGk()">+</button>
     </div>
 
-    <div class="dropContent">   
+    <div id="FachButtons">   
         <button id="Mathematik" onclick="setGk('Mathematik')">Mathematik</button>
         <button id="Biologie" onclick="setGk('Biologie')">Biologie</button>
         <button id="Chemie" onclick="setGk('Chemie')">Chemie</button>

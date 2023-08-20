@@ -7,14 +7,16 @@ html{
 }
 
 body {
-    background-color: #1d2326;
-    color: #bfa38a;
+  position: relative;
+    background-color: #EAEFF7;
+    color:#333333;
     font-family: monospace;
     text-align: center;
   }
 
   h1{
     font-size: 300%;
+    text-shadow: 0.07em 0.07em black;
   }
 
   button {
@@ -23,19 +25,21 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 35px;
-    border: 1px solid #bfa38a;
-    background: transparent;
-    color: #bfa38a;
-    border-radius: 5px;
+    border: 0px;
+    background: #1E3A5E;
+    color: #4579b9;
+    border-radius: 40px;
+    box-shadow: 0em 1em 2em 0em black;
   }
 
-  .drop{
+
+  #SelectionButtons{
     display: flex;
-    margin-top: 3%;
+    margin-top: 7%;
   }
   
 
-  .Gks {
+  #GkButtons {
     margin-left: 0px;
     padding-left: 5%;
     display: flex;
@@ -43,39 +47,44 @@ body {
     flex-wrap: wrap;
     border-right: 2px dotted black;
     padding-right: 2%;
+    
   }
 
+  #GkButtons button{
+    margin-top: 10%;
+  }
 
-
-  .dropContent{
+  #FachButtons{
     display: flex;
     flex-wrap: wrap;
     width: 70%;
     height: auto;
     justify-content: end;
-    
+    margin-left: 25%;
 }
 
-.dropButton{
-    margin-top: 15%;
+
+
+#FachButtons button{
+  display: block;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  margin-top: 4%;
 }
 
-  .dropContent button{
-    display: none;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-    margin-top: 4%;
-  }
-
-  .drop button:focus {
+button:focus {
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-  button:hover{
+button:hover{
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #35619b;
   }
 
+.clicked{
+    box-shadow: inset 0em 1em 2em 0em rgba(0, 0, 0, 0.8);
+    color: #315E96;
+  }
 .bestaetigen button{
   display: none;
   margin-top: 10%;

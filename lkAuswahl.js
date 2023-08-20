@@ -60,10 +60,9 @@ function setClickedLk(){
 }
 
 function setClickedGk(){
-    const GkBtns = document.querySelector("#GkButtons").children;
+    const GkBtns = document.querySelector("#FachButtons").children;
     for(i of GkBtns){
-        id = i.id;
-        if(Object.values(Lks).includes(id)){
+        if(Object.values(Lks).includes(i.id)){
             i.setAttribute("class","clicked");
             i.disabled = true;
         }
