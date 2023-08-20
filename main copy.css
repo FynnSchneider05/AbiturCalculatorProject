@@ -15,6 +15,13 @@ body {
 
   h1{
     font-size: 300%;
+    text-shadow: 0.1em 0.1em black;
+  }
+
+  #Beschreibung{
+    font-size: 110%;
+    padding: 3%;
+    padding-bottom: 0;
   }
 
   button {
@@ -23,44 +30,50 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 35px;
-    border: 1px solid #bfa38a;
+    border: 0px;
     background: transparent;
     color: #bfa38a;
-    border-radius: 5px;
+    border-radius: 40px;
+    box-shadow: 0em 1em 2em 0em black;
   }
 
- #dropButton{
+ #LkButtons{
     position: flex;
-    width: 100%;
-    height: 20%;
+    width: auto;
+    height: auto;
     border: 2px dotted black;
     margin-top: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
  }
 
- #dropButton button{
+ #LkButtons button{
   margin-left: 2%;
   margin-right: 2%;
  }
 
-  #dropContent button{
+  #GkButtons button{
     display: inline;
     margin-left: 1.5%;
     margin-right: 1.5%;
     margin-top: 4%;
   }
 
-  button:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+
 
   button:hover{
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-.bestaetigen button{
+  .clicked{
+    box-shadow: inset 0em 1em 2em 0em rgba(0, 0, 0, 0.8);
+    color: #9b8470;
+  }
+
+#bestaetigen button{
   display: none;
   margin-top: 10%;
   margin-left: 30%;

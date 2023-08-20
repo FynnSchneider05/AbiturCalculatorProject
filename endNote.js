@@ -9,7 +9,8 @@ FacharbeitNote = JSON.parse(localStorage.getItem("FacharbeitNote"));
 AbiturNoten = JSON.parse(localStorage.getItem("AbiturNoten"));
 
 
-console.log("Hallo Wlelt")
+//clear localStorage
+localStorage.clear();
 
 //Berechnung der Noten
 const NaturwissenschafteFächer = ["Mathematik", "Informatik", "Chemie", "Physik", "Biologie"];
