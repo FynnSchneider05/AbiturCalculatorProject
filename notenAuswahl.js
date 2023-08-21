@@ -190,11 +190,7 @@ function getNoten(){
     
     }
    }
-   console.log(LkNoten);
-   console.log(GkNoten);
-   console.log(FacharbeitNote);
-   console.log(mAbiturHalbjahrNoten);
-   console.log(AbiturNoten);  
+   
 }
 
 function genNoten(){
@@ -213,7 +209,7 @@ function changeWindow(){
     localStorage.clear();
     getNoten();
     
-    window.location.href = "endNote.html"
+    window.location.href = "https://www.gutefrage.net/frage/ich-glaube-ich-bin-dumm-wie-kann-ich-lernen-damit-umzugehen"
 
     LkNoten = JSON.stringify(LkNoten);
     localStorage.setItem("LkNoten", LkNoten);
@@ -236,7 +232,7 @@ function checkNoten(){
     let valid = true;
     for(i of inputs){
         if(i.value < 0 || i.value > 15){
-            i.style.background = "red";
+            i.style.background = "yellow";
             valid = false;
         }
         else if(i.value === ""){

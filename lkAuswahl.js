@@ -21,6 +21,12 @@ function setLk(fach){
     const LkBtns = document.querySelector("#LkButtons").children;
     for(LkBtn of LkBtns){
         LkBtn.setAttribute("class","");
+        
+        if(Lks[LkBtn.id] != ""){
+            LkBtn.style.background = "#7c1212";
+            LkBtn.style.color = "white";
+        }
+
     }
 
     switch(currentLk){

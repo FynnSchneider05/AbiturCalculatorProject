@@ -8,28 +8,31 @@ html{
 
 body {
   position: relative;
-    background-color: #EAEFF7;
-    color:#333333;
-    font-family: monospace;
+    background-color: #e8e4e0;
+    color:rgba(0,0,0,.7);
+    font-family: Arial;
     text-align: center;
   }
 
   h1{
     font-size: 300%;
-    text-shadow: 0.07em 0.07em black;
   }
+
 
   button {
     width: 200px;
     max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-weight: bold;
     height: 35px;
     border: 0px;
-    background: #1E3A5E;
-    color: #4579b9;
+    background: #FFFF;
+    color:rgba(0,0,0,.7);
     border-radius: 40px;
-    box-shadow: 0em 1em 2em 0em black;
+    box-shadow: 0em 0.1em 1em 0em rgba(0, 0, 0, 0.3);
+
+    transition: background-color 0.2s;
   }
 
 
@@ -40,14 +43,13 @@ body {
   
 
   #GkButtons {
-    margin-left: 0px;
+    margin-left: 5%;
     padding-left: 5%;
     display: flex;
     width: 20%;
     flex-wrap: wrap;
-    border-right: 2px dotted black;
-    padding-right: 2%;
-    
+    border-right: 5px solid #7c1212;
+    padding-right: 5%;  
   }
 
   #GkButtons button{
@@ -59,42 +61,58 @@ body {
     flex-wrap: wrap;
     width: 70%;
     height: auto;
-    justify-content: end;
-    margin-left: 25%;
+    justify-content:center;
+    margin-left: 0%;
+    margin-right: 10%;
 }
 
 
 
 #FachButtons button{
-  display: block;
+  display: none;
   margin-left: 1.5%;
   margin-right: 1.5%;
   margin-top: 4%;
 }
 
-button:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
 
 button:hover{
     cursor: pointer;
-    background-color: #35619b;
+    background-color: #7c1212;
+    color: white;
   }
 
 .clicked{
     box-shadow: inset 0em 1em 2em 0em rgba(0, 0, 0, 0.8);
-    color: #315E96;
+    background-color: #7c1212;
+    color: white;
   }
+
 .bestaetigen button{
   display: none;
   margin-top: 10%;
   margin-left: 30%;
   width: 40%;
   height: 40px;
-  
-} 
+  background-color: #7c1212;
+  color: white;
+  margin-bottom: 5%;
+}
+
+#Beschreibung{
+  font-size: 110%;
+  padding: 3%;
+  padding-bottom: 0;
+}
+
 
 #Gk8{
   display: none;
 }
 #Gk9{display: none;}
+
+
+#plus{
+  background-color: #7c1212;
+  color: white;
+}

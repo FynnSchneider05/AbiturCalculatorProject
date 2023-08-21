@@ -1,6 +1,6 @@
 const Lks = JSON.parse(localStorage.getItem("Lks"));
 const Gks = JSON.parse(localStorage.getItem("Gks"));
-let mündlicheAbiturs = {Prüfungsfach1: "", Prüfungsfach2: "keinPrüfungsfach"}
+let mündlicheAbiturs = {Prüfungsfach1: "", Prüfungsfach2: ""}
 let currentPfüfungsfach = "";
 
 for(i = 1; i <= Object.keys(Gks).length; i++){
@@ -11,14 +11,13 @@ for(i = 1; i <= Object.keys(Gks).length; i++){
 addKeinButton();
 
 function addKeinButton(){
-    const parent = document.getElementById("GkAuswahl");
+    const parent = document.getElementById("FachButtons");
     const button = document.createElement("button");
-    const text = document.createTextNode("/");
+    const text = document.createTextNode("Kein 2. Prüfungsfach");
     button.setAttribute("id","keinPrüfungsfach");
-    button.setAttribute("onclick","setPrüfungsfach('keinPrüfungsfach')");
+    button.setAttribute("onclick","setPrüfungsfach('keinPrüfungsfach'); setClickedFach()");
     button.appendChild(text);
     parent.appendChild(button);
-
 }
 
 
@@ -26,11 +25,11 @@ function addKeinButton(){
     if(Gks["Gk"+i.toString()] === "?"){
         return;
     }
-    const parent = document.getElementById("GkAuswahl");
+    const parent = document.getElementById("FachButtons");
     const button = document.createElement("button");
     const text = document.createTextNode(Gk);
     button.setAttribute("id",Gk);
-    button.setAttribute("onclick","setPrüfungsfach('" + Gk + "')");
+    button.setAttribute("onclick","setPrüfungsfach('" + Gk + "'); setClickedFach()");
     button.appendChild(text);
     parent.appendChild(button);
  }
@@ -41,13 +40,13 @@ function addKeinButton(){
     const PrüfungsfachButton = document.getElementById(currentPfüfungsfach);
 
     if(fach == "keinPrüfungsfach"){
-        PrüfungsfachButton.innerText = "/";
+        PrüfungsfachButton.innerText = "Kein 2. Prüfungsfach";
     }
     else{
     PrüfungsfachButton.innerText = fach;
     }
 
-    fächerAuswahl = document.getElementById("GkAuswahl").children;
+    fächerAuswahl = document.getElementById("FachButtons").children;
 
     for(i of fächerAuswahl){
         id = i.id;
@@ -56,20 +55,31 @@ function addKeinButton(){
         }
 
 
-        if(Object.values(mündlicheAbiturs).includes(id)){
-            i.innerText = id+ "**"
-            i.disabled = true;
-        }
-        else{
-            i.innerText = id;
-            i.disabled = false;
+    }
+
+    if(!Object.values(mündlicheAbiturs).includes("")){
+        document.querySelector("#bestätigen button").style.display = "block"
+    }
+
+
+    const PrüfungsButtons = document.querySelector("#PrüfungsfachButtons").children;
+    for(Btn of PrüfungsButtons){
+
+        if(mündlicheAbiturs[Btn.id] != ""){
+            Btn.setAttribute("class", "")
+            Btn.style.background = "#7c1212";
+            Btn.style.color = "white";
         }
     }
 
-    if(mündlicheAbiturs['Prüfungsfach1'] != ""){
-        document.querySelector("#bestätigen").style.display = "block"
-    }
 
+
+    if(currentPfüfungsfach == "Prüfungsfach1" && mündlicheAbiturs["Prüfungsfach2"] == ""){
+            let a = document.getElementById("Prüfungsfach2");
+            setCurrentPrüfungsfach("Prüfungsfach2");
+            a.setAttribute("class","clicked");
+            
+    }
 
  }
 
@@ -90,4 +100,30 @@ function addKeinButton(){
     mündlicheAbiturs = JSON.stringify(mündlicheAbiturs);
     localStorage.setItem("mündlicheAbiturs", mündlicheAbiturs);
 
+}
+
+
+function setClickedPrüfungsfach(){
+    let btn = document.getElementById(currentPfüfungsfach);
+    const PrüfungsfachBtns = document.querySelector("#PrüfungsfachButtons").children;
+    for(pBtn of PrüfungsfachBtns){
+        pBtn.setAttribute("class","");
+    }
+    btn.setAttribute("class","clicked");
+}
+
+function setClickedFach(){
+    const GkBtns = document.querySelector("#FachButtons").children;
+    for(i of GkBtns){
+        if(Object.values(mündlicheAbiturs).includes(i.id)){
+            i.setAttribute("class","clicked");
+            i.disabled = true;
+        }
+        else{
+            i.setAttribute("class","");
+            i.disabled = false;
+        }
+
+    }
+    
 }
