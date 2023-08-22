@@ -179,7 +179,7 @@ function getNoten(){
             AbiturNoten[Lks["Lk2"] + "Abitur"] = i.value;
             break;
         case "Lk3AbiturNote":
-            AbiturNoten[Lks["Lk1"] + "Abitur"] = i.value;
+            AbiturNoten[Lks["Lk3"] + "Abitur"] = i.value;
             break;
         case "mündlichesAbitur1Note":
             AbiturNoten[mündlicheAbiturs["Prüfungsfach1"] + "Abitur"] = i.value;
