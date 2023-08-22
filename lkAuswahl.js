@@ -21,6 +21,12 @@ function setLk(fach){
     const LkBtns = document.querySelector("#LkButtons").children;
     for(LkBtn of LkBtns){
         LkBtn.setAttribute("class","");
+        
+        if(Lks[LkBtn.id] != ""){
+            LkBtn.style.background = "#7c1212";
+            LkBtn.style.color = "white";
+        }
+
     }
 
     switch(currentLk){
@@ -60,10 +66,9 @@ function setClickedLk(){
 }
 
 function setClickedGk(){
-    const GkBtns = document.querySelector("#GkButtons").children;
+    const GkBtns = document.querySelector("#FachButtons").children;
     for(i of GkBtns){
-        id = i.id;
-        if(Object.values(Lks).includes(id)){
+        if(Object.values(Lks).includes(i.id)){
             i.setAttribute("class","clicked");
             i.disabled = true;
         }

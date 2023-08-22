@@ -8,44 +8,50 @@
 <body>
 <h1>Grundkurs Auswahl</h1>
 
-<div class="drop">
-    <div class="Gks">
-    <button id="Gk1" class="dropButton" onclick="showGk('Gk1')">Gk1</button>
-    <button id="Gk2" class="dropButton" onclick="showGk('Gk2')">Gk2</button>
-    <button id="Gk3" class="dropButton" onclick="showGk('Gk3')">Gk3</button>
-    <button id="Gk4" class="dropButton" onclick="showGk('Gk4')">Gk4</button>
-    <button id="Gk5" class="dropButton" onclick="showGk('Gk5')">Gk5</button>
-    <button id="Gk6" class="dropButton" onclick="showGk('Gk6')">Gk6</button>
-    <button id="Gk7" class="dropButton" onclick="showGk('Gk7')">Gk7</button>
-    <button id="Gk8" class="dropButton" onclick="showGk('Gk8')">Gk8</button>
-    <button id="Gk9" class="dropButton" onclick="showGk('Gk9')">Gk9</button>
+<p id="Beschreibung">Wählen Sie ihre Grundkurse, 
+    indem Sie zuerst auf den eines der Grundkurs Felder, <br></br> und anschließend auf die gewünschten Fächer, 
+    welche Sie wählen möchten klicken. <br></br>
+    Über das '+' Zeichen können Sie weitere Grundkurse Hinzufügen.
+</p>
+
+<div id="SelectionButtons">
+    <div id="GkButtons">
+    <button id="Gk1" class="dropButton" onclick="setCurrentGk('Gk1'); setClickedGk()">Gk1</button>
+    <button id="Gk2" class="dropButton" onclick="setCurrentGk('Gk2'); setClickedGk()">Gk2</button>
+    <button id="Gk3" class="dropButton" onclick="setCurrentGk('Gk3'); setClickedGk()">Gk3</button>
+    <button id="Gk4" class="dropButton" onclick="setCurrentGk('Gk4'); setClickedGk()">Gk4</button>
+    <button id="Gk5" class="dropButton" onclick="setCurrentGk('Gk5'); setClickedGk()">Gk5</button>
+    <button id="Gk6" class="dropButton" onclick="setCurrentGk('Gk6'); setClickedGk()">Gk6</button>
+    <button id="Gk7" class="dropButton" onclick="setCurrentGk('Gk7'); setClickedGk()">Gk7</button>
+    <button id="Gk8" class="dropButton" onclick="setCurrentGk('Gk8'); setClickedGk()">Gk8</button>
+    <button id="Gk9" class="dropButton" onclick="setCurrentGk('Gk9'); setClickedGk()">Gk9</button>
     <button id="plus" class="dropButton" onclick="addGk()">+</button>
     </div>
 
-    <div class="dropContent">   
-        <button id="Mathematik" onclick="setGk('Mathematik')">Mathematik</button>
-        <button id="Biologie" onclick="setGk('Biologie')">Biologie</button>
-        <button id="Chemie" onclick="setGk('Chemie')">Chemie</button>
-        <button id="Physik" onclick="setGk('Physik')">Physik</button>
-        <button id="Informatik" onclick="setGk('Informatik')">Informatik</button>
+    <div id="FachButtons">   
+        <button id="Mathematik" onclick="setGk('Mathematik'); setClickedFach()">Mathematik</button>
+        <button id="Biologie" onclick="setGk('Biologie'); setClickedFach()">Biologie</button>
+        <button id="Chemie" onclick="setGk('Chemie'); setClickedFach()">Chemie</button>
+        <button id="Physik" onclick="setGk('Physik'); setClickedFach()">Physik</button>
+        <button id="Informatik" onclick="setGk('Informatik'); setClickedFach()">Informatik</button>
 
-        <button id="Darstellendes Spiel"  onclick="setGk('Darstellendes Spiel')">Darstellendes Spiel</button>
-        <button id="Kunst" onclick="setGk('Kunst')">Kunst</button>
-        <button id="Musik" onclick="setGk('Musik')">Musik</button>
+        <button id="Darstellendes Spiel"  onclick="setGk('Darstellendes Spiel'); setClickedFach()">Darstellendes Spiel</button>
+        <button id="Kunst" onclick="setGk('Kunst'); setClickedFach()">Kunst</button>
+        <button id="Musik" onclick="setGk('Musik'); setClickedFach()">Musik</button>
 
 
-        <button id="Deutsch" onclick="setGk('Deutsch')">Deutsch</button>
-        <button id="Englisch" onclick="setGk('Englisch')">Englisch</button>
-        <button id="Französisch" onclick="setGk('Französisch')">Fanzösisch</button>
-        <button id="Latein" onclick="setGk('Latein')">Latein</button>
-        <button id="Spanisch" onclick="setGk('Spanisch')">Spanisch</button>
-        <button id="Erdkunde" onclick="setGk('Erdkunde')">Erdkunde</button>
-        <button id="Geschichte" onclick="setGk('Geschichte')">Geschichte</button>
-        <button id="Sozialkunde" onclick="setGk('Sozialkunde')">Sozialkunde</button>
+        <button id="Deutsch" onclick="setGk('Deutsch'); setClickedFach()">Deutsch</button>
+        <button id="Englisch" onclick="setGk('Englisch'); setClickedFach()">Englisch</button>
+        <button id="Französisch" onclick="setGk('Französisch'); setClickedFach()">Fanzösisch</button>
+        <button id="Latein" onclick="setGk('Latein'); setClickedFach()">Latein</button>
+        <button id="Spanisch" onclick="setGk('Spanisch'); setClickedFach()">Spanisch</button>
+        <button id="Erdkunde" onclick="setGk('Erdkunde'); setClickedFach()">Erdkunde</button>
+        <button id="Geschichte" onclick="setGk('Geschichte'); setClickedFach()">Geschichte</button>
+        <button id="Sozialkunde" onclick="setGk('Sozialkunde'); setClickedFach()">Sozialkunde</button>
 
-        <button id="Sport" onclick="setGk('Sport')">Sport</button>
+        <button id="Sport" onclick="setGk('Sport'); setClickedFach()">Sport</button>
 
-        <button id="Religion" onclick="setGk('Religion')">Religion</button>
+        <button id="Religion" onclick="setGk('Religion'); setClickedFach()">Religion</button>
     </div>
 
 </div>

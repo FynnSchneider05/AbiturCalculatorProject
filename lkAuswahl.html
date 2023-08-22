@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 
 <title>Abitur Rechner</title>
-<link rel="stylesheet" href="./main copy.css" />
+<link rel="stylesheet" href="./lkAuswahl.css" />
 </head>
 
 <body>
@@ -12,8 +12,8 @@
 <h1>Leistungskurs Wahl</h1>
 
 <p id="Beschreibung">Wählen Sie ihre 3 Leistungskurse, 
-    indem Sie zuerst auf den eines der Leistungskurs Felder, <br></br> und anschließend auf das gewünschte Fach, 
-    welches sie wählen möchten klicken</p>
+    indem Sie zuerst auf den eines der Leistungskurs Felder, <br></br> und anschließend auf die gewünschten Fächer, 
+    welche Sie wählen möchten klicken</p>
 
 <div id="SelectionButtons">
     <div id="LkButtons">
@@ -22,7 +22,7 @@
     <button id="Lk3" onclick="setCurrentLk('Lk3'); setClickedLk(this)">Lk3</button>
     </div>
 
-<div id="GkButtons">   
+<div id="FachButtons">   
         <button id="Mathematik" onclick="setLk('Mathematik'); setClickedGk()">Mathematik</button>
         <button id="Biologie" onclick="setLk('Biologie'); setClickedGk()">Biologie</button>
         <button id="Chemie" onclick="setLk('Chemie'); setClickedGk()">Chemie</button>
@@ -42,6 +42,7 @@
         <button id="Erdkunde" onclick="setLk('Erdkunde'); setClickedGk()">Erdkunde</button>
         <button id="Geschichte" onclick="setLk('Geschichte'); setClickedGk()">Geschichte</button>
         <button id="Sozialkunde" onclick="setLk('Sozialkunde'); setClickedGk()">Sozialkunde</button>
+        <button id="Philosophie" onclick="setLk('Philosophie'); setClickedGk()">Philosophie</button>
 
         <button id="Sport" onclick="setLk('Sport'); setClickedGk()">Sport</button>
 
@@ -54,7 +55,7 @@
     <button onclick="GkAuswahl()">Weiter</button>
 </div>
 
-<script src="main2.js"></script>
+<script src="lkAuswahl.js"></script>
 
 </body>
 </html>

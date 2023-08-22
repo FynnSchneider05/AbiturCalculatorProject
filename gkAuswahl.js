@@ -3,6 +3,8 @@ let focusGk = "";
 let Gks = {Gk1: "", Gk2: "", Gk3: "", Gk4: "", Gk5: "", Gk6: "", Gk7: "", Gk8: "?", Gk9:"?"};
 
 
+showGk();
+
 function addGk(){
     const Gk8 = document.getElementById("Gk8");
     const Gk9 = document.getElementById("Gk9");
@@ -19,8 +21,8 @@ function addGk(){
     
 }
 
-function showGk(Gk){
-   const content = document.querySelectorAll(".dropContent Button");
+function showGk(){
+   const content = document.querySelectorAll("#FachButtons Button");
 
    for(i of content){
     id = i.id;
@@ -29,8 +31,10 @@ function showGk(Gk){
     }
    }
 
-   focusGk = Gk
+}
 
+function setCurrentGk(Gk){
+    focusGk = Gk;
 }
 
 function setGk(fach){
@@ -38,25 +42,56 @@ function setGk(fach){
 
     GkButton = document.getElementById(focusGk);
     GkButton.innerText = fach;
-    gewaehltesFach = document.getElementById(fach);
-    faecherListe = document.querySelector(".dropContent").children;
+    
+    if(!Object.values(Gks).includes("")){
+        document.querySelector(".bestaetigen button").style.display = "block"
+    }
 
-    for(i of faecherListe){
-        id = i.id;
-        if(Object.values(Gks).includes(id)){
-            i.innerText = id+ "**"
-            i.disabled = true;
+    const GkBtns = document.querySelector("#GkButtons").children;
+    for(GkBtn of GkBtns){
+        GkBtn.setAttribute("class","");
+        
+        if(Gks[GkBtn.id] != ""){
+            GkBtn.style.background = "#7c1212";
+            GkBtn.style.color = "white";
         }
-        else{
-            i.innerText = id;
-            i.disabled = false;
-        }
-
     }
 
 
-    if(!Object.values(Gks).includes("")){
-        document.querySelector(".bestaetigen button").style.display = "block"
+
+
+    switch(focusGk){
+        case "Gk1":
+            let a = document.getElementById("Gk2");
+            setCurrentGk("Gk2");
+            a.setAttribute("class","clicked");
+            break;
+        case "Gk2":
+            let b = document.getElementById("Gk3");
+            setCurrentGk("Gk3");
+            b.setAttribute("class","clicked");
+            break;
+        case "Gk3":
+            let c = document.getElementById("Gk4");
+            setCurrentGk("Gk4");
+            c.setAttribute("class","clicked");
+            break;
+         case "Gk4":
+            let d = document.getElementById("Gk5");
+            setCurrentGk("Gk5");
+            d.setAttribute("class","clicked");
+            break;
+        case "Gk5":
+            let e = document.getElementById("Gk6");
+            setCurrentGk("Gk6");
+            e.setAttribute("class","clicked");
+            break;
+        case "Gk6":
+            let f = document.getElementById("Gk7");
+            setCurrentGk("Gk7");
+            f.setAttribute("class","clicked");
+            break;
+
     }
 
 }
@@ -68,4 +103,31 @@ function changeWindow(){
     Gks = JSON.stringify(Gks);
     localStorage.setItem("Gks", Gks);
 
+}
+
+
+function setClickedGk(){
+    let btn = document.getElementById(focusGk);
+    const GkBtns = document.querySelector("#GkButtons").children;
+    for(GkBtn of GkBtns){
+        GkBtn.setAttribute("class","");
+    }
+    btn.setAttribute("class","clicked");
+}
+
+function setClickedFach(){
+    console.log("jippi")
+    const GkBtns = document.querySelector("#FachButtons").children;
+    for(i of GkBtns){
+        if(Object.values(Gks).includes(i.id)){
+            i.setAttribute("class","clicked");
+            i.disabled = true;
+        }
+        else{
+            i.setAttribute("class","");
+            i.disabled = false;
+        }
+
+    }
+    
 }

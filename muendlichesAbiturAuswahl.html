@@ -10,12 +10,17 @@
 <body>
     <h1>Müdliches Abitur Auswahl</h1>
 
-    <div id="PrüfungsfachButton">
-    <button id="Prüfungsfach1" onclick="setCurrentPrüfungsfach('Prüfungsfach1')">Prüfungsfach 1</button>
-    <button id="Prüfungsfach2" onclick="setCurrentPrüfungsfach('Prüfungsfach2')">Prüfungsfach 2</button>
+    <p id="Beschreibung">Wählen Sie die Fächer, in welchen Sie ihre mündliche Abiturprüfung halten, 
+        indem Sie zuerst auf den eines der Prüfungsfach Felder, <br></br> und anschließend auf die gewünschten Fächer, 
+        welche Sie wählen möchten klicken.
+    </p>
+
+    <div id="PrüfungsfachButtons">
+    <button id="Prüfungsfach1" onclick="setCurrentPrüfungsfach('Prüfungsfach1'); setClickedPrüfungsfach()">Prüfungsfach 1</button>
+    <button id="Prüfungsfach2" onclick="setCurrentPrüfungsfach('Prüfungsfach2'); setClickedPrüfungsfach()">Prüfungsfach 2</button>
     </div>
 
-    <div id="GkAuswahl">
+    <div id="FachButtons">
 
 
     </div>
