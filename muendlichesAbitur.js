@@ -1,6 +1,6 @@
 const Lks = JSON.parse(localStorage.getItem("Lks"));
 const Gks = JSON.parse(localStorage.getItem("Gks"));
-let mündlicheAbiturs = {Prüfungsfach1: "", Prüfungsfach2: ""}
+let mündlicheAbiturs = {Prüfungsfach1: "", Prüfungsfach2: "keinPrüfungsfach"}
 let currentPfüfungsfach = "";
 
 for(i = 1; i <= Object.keys(Gks).length; i++){
