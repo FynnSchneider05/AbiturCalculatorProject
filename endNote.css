@@ -1,0 +1,71 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+
+body {
+    position: flex;
+    height: 100%;
+    width: 100%;
+     background: #e8e4e0;
+      color:rgba(0,0,0,.7);
+      font-family: Arial;
+      text-align: center;
+    }
+
+
+h1{
+    font-size: 300%;
+    }
+    
+#PunktzahlBox{
+    width: 80vw;
+    margin-left: 10vw;
+    border: 2px solid #7c1212;
+}
+
+#TabelleBeschreibungBox{
+    display: flex;
+}
+
+table{
+    margin-top: 5% ;
+    margin-left: 10%;
+    margin-right: 5%;
+    border-collapse: collapse;
+
+    
+}
+
+th{
+    padding: 1em 3em;
+    border-bottom: 1px solid #7c1212;
+
+}
+td{
+    padding: 1.3em 1em;
+    border-bottom: 1px solid #7c1212;
+}
+
+
+#Beschreibung{
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+a{
+    border: 0px;
+    color: #7c1212;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+
+
+
