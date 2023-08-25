@@ -6,9 +6,16 @@ html{
 *{
   box-sizing: inherit;
 }
+@media
+(min-width:1000px) {
+  p{
+  font-size: 17px;
+  }
+}
+
+
 
 body {
-  position: flex;
   height: 100%;
   width: 100%;
    background: #e8e4e0;
@@ -22,7 +29,6 @@ body {
     }
 
   #Beschreibung{
-    font-size: 110%;
     padding: 3%;
     padding-bottom: 0;
   }
@@ -44,8 +50,7 @@ body {
   }
 
  #LkButtons{
-    position: flex;
-    width: 90%;
+   width: 90%;
     height: auto;
     margin-top: 5%;
     margin-left: 5%;
