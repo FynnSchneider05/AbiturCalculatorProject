@@ -38,6 +38,9 @@ function setCurrentGk(Gk){
 }
 
 function setGk(fach){
+    if(focusGk == ""){
+        return;
+    }
     Gks[focusGk] = fach;
 
     GkButton = document.getElementById(focusGk);

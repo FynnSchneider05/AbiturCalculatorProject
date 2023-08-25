@@ -2,7 +2,7 @@ const Lks = JSON.parse(localStorage.getItem("Lks"));
 let Gks = JSON.parse(localStorage.getItem("Gks"));
 const mündlicheAbiturs = JSON.parse(localStorage.getItem("mündlicheAbiturs"));
 
-localStorage.clear
+localStorage.clear();
 
 
 let LkNoten = {};
@@ -29,6 +29,8 @@ console.log(Gks);
 for(let i = 1; i <= Object.keys(Gks).length-1; i++){ //<-- -1 da warum auch immer ein undifined Objekt mit der id Q10 am Ende erstellt wird 
     createGkNotenAuswahl(Gks["Gk" + i], i);
 }
+
+identifyMusikKunst();
 
 
 
@@ -209,7 +211,7 @@ function changeWindow(){
     localStorage.clear();
     getNoten();
     
-    window.location.href = "https://www.gutefrage.net/frage/ich-glaube-ich-bin-dumm-wie-kann-ich-lernen-damit-umzugehen"
+    window.location.href = 'endNote.html' //"https://www.gutefrage.net/frage/ich-glaube-ich-bin-dumm-wie-kann-ich-lernen-damit-umzugehen"
 
     LkNoten = JSON.stringify(LkNoten);
     localStorage.setItem("LkNoten", LkNoten);
@@ -234,6 +236,11 @@ function checkNoten(){
         if(i.value < 0 || i.value > 15){
             i.style.background = "yellow";
             valid = false;
+
+            if(i.classList.contains('MusikQ4')){
+                i.value = -1;
+                valid = true;
+            }
         }
         else if(i.value === ""){
             i.style.background = "yellow";
@@ -244,4 +251,16 @@ function checkNoten(){
         }
     }
     return valid;
+}
+
+
+function identifyMusikKunst(){
+    let h2s = document.querySelectorAll('h2');
+
+    h2s.forEach((h2) =>{
+        if(h2.innerText == 'Musik' || h2.innerText == 'Kunst'){
+            let inputQ4 = h2.nextSibling.nextSibling.nextSibling.nextSibling;
+            inputQ4.classList.add('MusikQ4');    
+    }
+})
 }

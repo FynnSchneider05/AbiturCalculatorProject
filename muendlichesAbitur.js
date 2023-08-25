@@ -35,6 +35,9 @@ function addKeinButton(){
  }
 
  function setPrüfungsfach(fach){
+    if(currentPfüfungsfach == ""){
+        return;
+    }
     mündlicheAbiturs[currentPfüfungsfach] = fach;
 
     const PrüfungsfachButton = document.getElementById(currentPfüfungsfach);

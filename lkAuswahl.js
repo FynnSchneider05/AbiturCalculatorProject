@@ -10,6 +10,10 @@ function setCurrentLk(selectedLk){
 
 
 function setLk(fach){
+    if(currentLk == ""){
+        return;
+    }
+
     Lks[currentLk] = fach;
     const currLk = document.getElementById(currentLk);
     currLk.innerText = fach;
