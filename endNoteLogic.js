@@ -533,4 +533,4 @@ function getEingebrachterHalbjahre(){
 
 //Dom
 let punktAnzeige = document.getElementById('Punktzahl');
-punktAnzeige.innerText = gesamtPunktzahl;
+punktAnzeige.innerText = Math.floor(gesamtPunktzahl);
