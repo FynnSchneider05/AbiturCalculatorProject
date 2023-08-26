@@ -118,3 +118,16 @@ button:hover{
   background-color: #7c1212;
   color: white;
 }
+
+
+@media (max-width: 1000px){
+  p{
+   font-size: 16px;
+ }
+ h2{
+   font-size: 20px;
+ }
+ h1{
+   font-size: 40px;
+ }
+}
