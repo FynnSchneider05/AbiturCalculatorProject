@@ -1,0 +1,168 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+     background: #e8e4e0;
+      color:rgba(0,0,0,.7);
+      font-family: Arial;
+      text-align: center;
+      margin: 0px;
+
+    }
+
+h1{
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 2vh;
+}
+
+
+#section1{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100vw;
+    height:auto;
+    
+}
+
+
+#section2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    
+}
+
+#section3{
+    width: 100vw;
+    height: 20vh;
+}
+
+
+.info{
+    background-color: rgb(220, 216, 211);
+    width: 30vw;
+    margin: 3vw 5vw;
+    padding: 1vw 3vw;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.7)
+}
+
+.info h2{
+    margin: 0px;
+}
+
+.border{
+    width: 80vw;
+    border: 4px solid #7c1212;
+}
+
+
+#section2 h2{
+    width: 100vw;
+    height: fit-content;
+    padding-top: 0;
+}
+
+
+table{
+    width: 40vw;
+    height: 20vh;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    margin-left: 15vw;
+    word-wrap:normal;
+    border-collapse: collapse;
+    
+}
+
+th{
+    
+    width: 20vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 1vw 15vw;
+}
+
+td{
+    height: 7vh;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+
+
+#section3 h2{
+    font-size: 200%;
+}
+
+
+button {
+    width:  20vw;
+    height: 9vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    height: 35px;
+    border: 0px;
+    background: #FFFF;
+    color:rgba(0, 0, 0, 0.7);
+    border-radius: 40px;
+    box-shadow: 0em 0.1em 1em 0em rgba(0, 0, 0, 0.3);
+
+    transition: background-color 0.2s;
+  }
+
+  button:hover{
+    cursor: pointer;
+    background-color: #7c1212;
+    color: white;
+  }
+
+
+  @media(max-aspect-ratio: 1/1){
+    #section1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info{
+        width: 80vw;
+        height: auto;
+    }
+
+    th{
+        margin-left: 0;
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+    thead{
+        width: 80vw;
+    }
+    table{
+        margin-left: 2.5vw
+    }
+
+    button{
+        width: 20vw;
+        height: 5vh;
+        font-size: 2vw;
+    }
+  }
