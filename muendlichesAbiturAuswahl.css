@@ -8,8 +8,8 @@ html{
 
 
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #e8e4e0;
   color:rgba(0,0,0,.7);
   font-family: Arial;
@@ -26,7 +26,8 @@ p{
   }
 
   button {
-    width:  10vw;
+    width:  12vw;
+    
     max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -47,26 +48,33 @@ p{
 
   #PrüfungsfachButtons{
     display:  flex;
-    flex-wrap: wrap;
-    width: 70%;
-    margin-left: 15%;
+    flex-wrap: nowrap;
+    width: 80vw;
+    margin-left: 10vw;
     padding-bottom: 3%;
     height: auto;
     margin-top: 7%;
     border-bottom: 5px solid #7c1212;
-    justify-content: space-evenly;
+    justify-content: center;
     }
+
+  #PrüfungsfachButtons button{  
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
   
   
 
 #FachButtons{
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 80vw;
   height: auto;
   justify-content: center;
-  margin-top: 3%;
-  margin-left:10%;
+  margin-top: 2vh;
+  border: 1px solid black;
+  margin-left: 10vw ;
+
 }
 
 #FachButtons button{
@@ -93,12 +101,16 @@ p{
     color: white;
   }
 
+#bestätigen{
+  display: flex;
+  justify-content: center;
+}
+
 #bestätigen button{
   display: none;
-  margin-top: 10%;
-  margin-left: 30%;
-  width: 40%;
-  height: 40px;
+  margin-top:10%;
+  width: 20vw;
+  height: 5vh;
   background-color: #7c1212;
   color: white;
   margin-bottom: 5%;
@@ -107,16 +119,40 @@ p{
 #Beschreibung{
   padding: 3%;
   padding-bottom: 0;
+  width: 80vw;
+  margin-left: 10vw;
 }
 
-@media (max-width: 1000px){
+@media (max-aspect-ratio: 3/4){
   p{
-   font-size: 16px;
- }
- h2{
-   font-size: 20px;
+   font-size: 3vw;
  }
  h1{
-   font-size: 40px;
+   font-size: 8vw;
+   margin: 1vw;
  }
+ button{
+  font-size: 2.5vw;
+  width: 40vw;
+  height: 10vw;
+ }
+
+
+ #bestätigen button{
+  width: 50vw;
+  height: 10vw;
+}
+
+#PrüfungsfachButtons{
+  margin: 0;
+  width: 85vw;
+  margin-left: 7.5vw;
+}
+
+
+#FachButtons{
+ width: 100vw;
+ margin-left: 0vw;
+ border: 1px solid black;
+}
 }

@@ -27,10 +27,13 @@ body {
   #Beschreibung{
     padding: 3%;
     padding-bottom: 0;
+    width: 80vw;
+    margin-left: 10vw;
   }
 
   button {
-    width:  10vw;
+    width:  12vw;
+    height: 6vw;
     max-width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -84,27 +87,42 @@ body {
     background-color: #7c1212;
   }
 
+  
+#bestaetigen{
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #bestaetigen button{
   display: none;
   background-color: #7c1212;
   color: white;
-  margin-top: 10%;
-  margin-left: 30%;
   width: 40%;
   height: 40px;
   margin-bottom: 5%;
-  
 } 
 
 
-@media (max-width: 1000px){
+
+@media (max-aspect-ratio: 3/4){
   p{
-   font-size: 16px;
- }
- h2{
-   font-size: 20px;
+   font-size: 3vw;
  }
  h1{
-   font-size: 40px;
+   font-size: 8vw;
+ }
+ button{
+  font-size: 2.5vw;
+  width: 40vw;
+  height: 10vw;
+ }
+
+
+ #bestaetigen button{
+  width: 50vw;
+  height: 10vw;
+  
  }
 }
