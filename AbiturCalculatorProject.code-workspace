@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../WorkoutGenerator"
+		},
+		{
+			"path": "../TimApp"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AbiturCalculatorProject"
+	}
+}

@@ -10,8 +10,7 @@ AbiturNoten = JSON.parse(localStorage.getItem("AbiturNoten"));
 
 
 
-//clear localStorage    
-//localStorage.clear();
+
 
 
 //Berechnung der Noten
@@ -243,7 +242,7 @@ function halbjahreAuffüllen(){
 
     //wie viele müssen aufgefüllt werden
     let anzahlGesuchteHalbjahre = 0;
-    anzahlGesuchteHalbjahre = 43 - eingebrachteHalbjahre.length;
+    anzahlGesuchteHalbjahre = 42 - eingebrachteHalbjahre.length;
    
 
     //notenListe mit nicht eingebrachten Fächern [{MatheQ1: 13}, {DeutschQ3: 9}]
@@ -448,6 +447,7 @@ function abiturNotenVerrechnen(){
 //Gesamtnote Berechnen
 function gesamtPunktzahlBerechnen(){
     gesamtPunktzahl = summeAbituNoten + summeHalbjahre;
+    console.log(summeAbituNoten, '+', summeHalbjahre,'=',gesamtPunktzahl)
 }
 
 
@@ -534,3 +534,7 @@ function getEingebrachterHalbjahre(){
 //Dom
 let punktAnzeige = document.getElementById('Punktzahl');
 punktAnzeige.innerText = Math.floor(gesamtPunktzahl);
+
+
+
+

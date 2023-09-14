@@ -1,8 +1,6 @@
-const Lks = JSON.parse(localStorage.getItem("Lks"));
+let Lks = JSON.parse(localStorage.getItem("Lks"));
 let Gks = JSON.parse(localStorage.getItem("Gks"));
-const mündlicheAbiturs = JSON.parse(localStorage.getItem("mündlicheAbiturs"));
-
-localStorage.clear();
+let mündlicheAbiturs = JSON.parse(localStorage.getItem("mündlicheAbiturs"));
 
 
 let LkNoten = {};
@@ -11,6 +9,9 @@ let GkNoten = {};
 let mAbiturHalbjahrNoten = {};
 let FacharbeitNote = {};
 
+ladeSeite();
+
+function ladeSeite(){
 
 //starte Lk erstellung
 for(let i = 1; i <= Object.keys(Lks).length; i++){
@@ -23,7 +24,6 @@ for(let i = 1; i <= Object.keys(mündlicheAbiturs).length; i++){
     createMündlichesAbiturNotenAuswahl(mündlicheAbiturs["Prüfungsfach" + i], i)
 }
 
-console.log(Gks);
 
 //startet Grundkust erstellung
 for(let i = 1; i <= Object.keys(Gks).length-1; i++){ //<-- -1 da warum auch immer ein undifined Objekt mit der id Q10 am Ende erstellt wird 
@@ -32,7 +32,7 @@ for(let i = 1; i <= Object.keys(Gks).length-1; i++){ //<-- -1 da warum auch imme
 
 identifyMusikKunst();
 
-
+}
 
 //Erstelle Lks
 function createLks(fach, LkNr){
@@ -134,6 +134,7 @@ function createMündlichesAbiturNotenAuswahl(fach, PrüfungsfachNr){
 }
 
 
+
 //Helfer functionen
 function getKeyByValue(object, value){
     return Object.keys(object).find(key => object[key] === value);
@@ -148,12 +149,13 @@ function getNoten(){
     }
     
     //Gk Noten 
-    for(let i = 1; i <= Object.keys(Gks).length; i++){
+    for(let i = 1; i <= Object.keys(Gks).length-1; i++){
         if(Gks["Gk" + i] === "?"){
             continue
         }
 
         for(let j = 1; j <= 4; j++){
+            console.log('Gk'+i+'Q'+j);
        GkNoten[Gks['Gk'+ i] + "Q" + j] = document.getElementById("Gk" + i + "Q" + j).value;
        }
    }
@@ -208,7 +210,7 @@ function changeWindow(){
     if(!checkNoten()){
         return;
     }
-    localStorage.clear();
+
     getNoten();
     
     window.location.href = 'endNote.html' //"https://www.gutefrage.net/frage/ich-glaube-ich-bin-dumm-wie-kann-ich-lernen-damit-umzugehen"
@@ -264,3 +266,6 @@ function identifyMusikKunst(){
     }
 })
 }
+
+
+
