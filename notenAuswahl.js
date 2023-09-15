@@ -269,3 +269,29 @@ function identifyMusikKunst(){
 
 
 
+//personal tests
+function fillWith15(){
+    let inputF = document.querySelectorAll('input');
+    inputF.forEach(input =>{
+        input.value = 15;
+    })
+}
+
+function fillWithMe(){
+    Lks = {Lk1: 'Mathematik', Lk2: 'Physik', Lk3: 'Erdkunde'}
+    Gks = {Gk1: 'Englisch', Gk2: '?', Gk3: '?', Gk4: 'Chemie', Gk5: 'Geschichte', Gk6: 'Musik', Gk7: 'Religion', Gk8: 'Sport'}
+    console.log(Gks)
+    delete Gks.undefined;
+    console.log(Gks);
+    mündlicheAbiturs = {Prüfungsfach1: 'Deutsch', Prüfungsfach2: 'Informatik'};
+    ladeSeite()
+    meineNotenauffüllen();
+}
+
+function meineNotenauffüllen(){
+    let inputF = document.querySelectorAll('input');
+    let meineNoten = [14, 14, 14, -1, -1, 12, 11, 12,-1,-1, 12, 12, 13, -1, -1, 15,15,15,-1,-1,12,14,14,-1,-1,12,12,13,-1,12,12,13,-1,11,11,12,-1,6,9,8,-1,12,13,14,-1,14,12,14,-1,15]
+    for(let i = 0; i < inputF.length; i++){
+        inputF[i].value = meineNoten[i];
+    }
+}

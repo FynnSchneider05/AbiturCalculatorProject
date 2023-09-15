@@ -242,8 +242,9 @@ function halbjahreAuffüllen(){
 
     //wie viele müssen aufgefüllt werden
     let anzahlGesuchteHalbjahre = 0;
-    anzahlGesuchteHalbjahre = 42 - eingebrachteHalbjahre.length;
-   
+    anzahlGesuchteHalbjahre = 43 - eingebrachteHalbjahre.length;
+    console.log(eingebrachteHalbjahre.length)
+   console.log(anzahlGesuchteHalbjahre)
 
     //notenListe mit nicht eingebrachten Fächern [{MatheQ1: 13}, {DeutschQ3: 9}]
     let eingebrachteHalbjahreFächer = getEingebrachterHalbjahre();
@@ -333,24 +334,28 @@ function sucheNBesteNoten(liste1, liste2, anzahlGesuchteHalbjahre){
     //nBesteNoten = {}
 
     while(n <= anzahlGesuchteHalbjahre){
-    if(n === anzahlGesuchteHalbjahre){
+    if(n == anzahlGesuchteHalbjahre){
         letztesHalbjahrEinbringen(liste2);
-        console.log('nB',nBesteNoten);
-        console.log('List2',liste2);    
-        console.log('List1',liste1);    
-
+        console.log(n);
+        console.log(eingebrachteHalbjahre)
+        console.log('hh')
         return;
-    } 
-    liste2Einbringen(liste2);
-    liste1Einbringen(liste1);
+    }
+    console.log('hh')
+ 
+    liste2Einbringen(liste2, anzahlGesuchteHalbjahre);
+    liste1Einbringen(liste1, anzahlGesuchteHalbjahre);
     
     }
 
     
 }
 
-function liste1Einbringen(liste1){
+function liste1Einbringen(liste1, anzahlGesuchteHalbjahre){
     for(i of liste1){
+        if(n == anzahlGesuchteHalbjahre){
+            return;
+        }
         if(Object.keys(nBesteNoten).includes(i[0]) || Object.keys(nBesteNoten).includes(i[0].substring(0, i[0].length-2) + "Q4")){
             continue;
         }
@@ -373,8 +378,11 @@ function liste1Einbringen(liste1){
     }
 }
 
-function liste2Einbringen(liste2){
+function liste2Einbringen(liste2, anzahlGesuchteHalbjahre){
     for(i of liste2){
+        if(n == anzahlGesuchteHalbjahre){
+            return;
+        }
         if(Object.keys(nBesteNoten).includes(i[0])){
             
             continue;
