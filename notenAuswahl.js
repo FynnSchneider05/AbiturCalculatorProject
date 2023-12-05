@@ -286,8 +286,8 @@ function fillWithMe(){
     localStorage.setItem("mündlicheAbiturs", mündlicheAbiturs);
     localStorage.setItem("Lks", Lks);
     localStorage.setItem("Gks", Gks);
-    window.location.href = "notenAuswahl.html"
-    meineNotenauffüllen();
+    window.location.reload();
+    
 }
 
 function meineNotenauffüllen(){
