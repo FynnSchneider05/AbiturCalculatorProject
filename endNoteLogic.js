@@ -286,20 +286,7 @@ function halbjahreAuffüllen(){
 
 
 
-/*
-Neuer Ansatz:
 
-   1. Liste Sortiert nach Halbjahren + Q4
-   2. Liste Sortiert nach Halbjahren Ohne höchstes L1 Halbjahr
-
-   adde L1[0]
-   lösche L1[0]
-   wenn von L2[0] schon Q4 geaddet ist, adde L2[0] und lösche L2[0]
-   wenn nicht adde wieder L1[0]
-
-
-
-*/
 
 //Sortiert nach Note mit Q4 Note addiert
 function sortToListe1(notenListe, Q4Liste){
