@@ -276,6 +276,7 @@ function fillWith15(){
     inputF.forEach(input =>{
         input.value = 15;
     })
+    
 }
 
 function fillWithMe(){
@@ -292,9 +293,7 @@ function fillWithMe(){
     
 }
 
-function fillWithMyGrades(){
-    meineNotenauffüllen();
-}
+
 
 function meineNotenauffüllen(){
     let inputF = document.querySelectorAll('input');
