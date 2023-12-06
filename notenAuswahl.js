@@ -297,7 +297,7 @@ function fillWithMe(){
 
 function meineNotenauffüllen(){
     let inputF = document.querySelectorAll('input');
-    let meineNoten = [14, 14, 14, -1, -1, 12, 11, 12,-1,-1, 12, 12, 13, -1, -1, 15,15,15,-1,-1,12,14,14,-1,-1,12,12,13,-1,12,12,13,-1,11,11,12,-1,6,9,8,-1,12,13,14,-1,14,12,14,-1,15]
+    let meineNoten = [14, 14, 14, 13, -1, 12, 11, 12, 12,-1, 12, 12, 13, 12, -1, 15,15,15,14,-1,12,14,14,13,-1,12,12,13,13,12,12,13,13,11,11,12,2,6,9,8,-1,12,13,14,13,14,12,14,13,15]
     for(let i = 0; i < inputF.length; i++){
         inputF[i].value = meineNoten[i];
     }
