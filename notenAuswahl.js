@@ -292,7 +292,9 @@ function fillWithMe(){
     
 }
 
-
+function fillWithMyGrades(){
+    meineNotenauffüllen();
+}
 
 function meineNotenauffüllen(){
     let inputF = document.querySelectorAll('input');
