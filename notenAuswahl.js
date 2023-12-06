@@ -279,9 +279,9 @@ function fillWith15(){
 }
 
 function fillWithMe(){
-    Lks = {Lk1: 'Mathematik', Lk2: 'Physik', Lk3: 'Erdkunde'}
-    Gks = {Gk1: 'Englisch', Gk2: '?', Gk3: '?', Gk4: 'Chemie', Gk5: 'Geschichte', Gk6: 'Musik', Gk7: 'Religion', Gk8: 'Sport'}
-    mündlicheAbiturs = {Prüfungsfach1: 'Deutsch', Prüfungsfach2: 'Informatik'};
+    Lks = JSON.stringify( {Lk1: 'Mathematik', Lk2: 'Physik', Lk3: 'Erdkunde'})
+    Gks = JSON.stringify( {Gk1: 'Englisch', Gk2: '?', Gk3: '?', Gk4: 'Chemie', Gk5: 'Geschichte', Gk6: 'Musik', Gk7: 'Religion', Gk8: 'Sport'});
+    mündlicheAbiturs = JSON.stringify( {Prüfungsfach1: 'Deutsch', Prüfungsfach2: 'Informatik'});
     localStorage.clear();
     localStorage.setItem("mündlicheAbiturs", mündlicheAbiturs);
     localStorage.setItem("Lks", Lks);
