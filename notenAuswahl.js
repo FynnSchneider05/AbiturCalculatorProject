@@ -289,6 +289,10 @@ function fillWithMe(){
     localStorage.setItem("Lks", Lks);
     localStorage.setItem("Gks", Gks);
     window.location.reload()
+    
+}
+
+function fillWithMyGrades(){
     meineNotenauffüllen();
 }
 
